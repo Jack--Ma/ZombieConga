@@ -13,7 +13,11 @@ class GameScene: SKScene {
     let zombie = SKSpriteNode(imageNamed: "zombie1")
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
+    var lastTouchLocation: CGPoint = CGPointZero
+    
     let zombieMovePointsPerSec: CGFloat = 480.0
+    let zombieRotateRadiansPerSec: CGFloat = 4.0 * π
+    
     var velocity = CGPointZero
     let playableRect: CGRect
     
@@ -63,9 +67,16 @@ class GameScene: SKScene {
             dt = 0
         }
         lastUpdateTime = currentTime
+        
+        //到达位置时，停止zombie
+        if (lastTouchLocation - zombie.position).length() <= zombieMovePointsPerSec * CGFloat(dt) {
+            zombie.position = lastTouchLocation
+            velocity = CGPointZero
+            return
+        }
         moveSprite(zombie, velocity: velocity)
         boundsCheckZombie()
-        rotateSprite(zombie, direction: velocity)
+        rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
     }
     
     //移动zombie
@@ -96,8 +107,11 @@ class GameScene: SKScene {
     }
     
     //旋转zombie
-    func rotateSprite(sprite: SKSpriteNode, direction: CGPoint) {
-        sprite.zRotation = direction.angel
+    func rotateSprite(sprite: SKSpriteNode, direction: CGPoint, rotateRadiansPerSec: CGFloat) {
+        let shortest = shortestAngleBetween(sprite.zRotation, angle2: direction.angle)
+        let amountToRotate = min(rotateRadiansPerSec * CGFloat(dt), abs(shortest))
+        
+        sprite.zRotation += shortest.sign() * amountToRotate
     }
     
     // MARK: touch action
@@ -106,6 +120,7 @@ class GameScene: SKScene {
             return
         }
         let touchLocation = touch.locationInNode(self)
+        lastTouchLocation = touchLocation
         sceneTouched(touchLocation)
     }
     
@@ -114,6 +129,7 @@ class GameScene: SKScene {
             return
         }
         let touchLocation = touch.locationInNode(self)
+        lastTouchLocation = touchLocation
         sceneTouched(touchLocation)
     }
     
