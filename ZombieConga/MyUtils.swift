@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreGraphics
+import AVFoundation
 
 func + (left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x+right.x, y: left.y+right.y)
@@ -109,4 +110,22 @@ extension CGFloat {
     }
 }
 
-        
+var backgroundMusicPlayer: AVAudioPlayer!
+
+func playBackgroundMusic(fileName: String) {
+    let resouceURL = NSBundle.mainBundle().URLForResource(fileName, withExtension: nil)
+    guard let url = resouceURL else {
+        print("Could not find file: \(fileName)")
+        return
+    }
+    
+    do {
+        try backgroundMusicPlayer = AVAudioPlayer(contentsOfURL: url)
+        backgroundMusicPlayer.numberOfLoops = -1
+        backgroundMusicPlayer.prepareToPlay()
+        backgroundMusicPlayer.play()
+    } catch {
+        print("Could not create audio player!")
+        return
+    }
+}

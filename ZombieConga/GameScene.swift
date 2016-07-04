@@ -17,7 +17,7 @@ class GameScene: SKScene {
     let zombie = SKSpriteNode(imageNamed: "zombie1")
     var lastUpdateTime: NSTimeInterval = 0
     var dt: NSTimeInterval = 0
-    var lastTouchLocation: CGPoint = CGPointZero
+    var lastTouchLocation: CGPoint = CGPoint(x: 400.0, y: 400.0)
     
     let zombieMovePointsPerSec: CGFloat = 480.0
     let zombieRotateRadiansPerSec: CGFloat = 4.0 * π
@@ -27,7 +27,10 @@ class GameScene: SKScene {
     let zombieAnimation: SKAction
     
     var invincible = false
+    var lives = 5
+    var gameOver = false
     
+    // MARK: init
     override init(size: CGSize) {
         let maxAspectRatio: CGFloat = 16.0/9.0  //16:9屏幕下
         let playableHeight = size.width / maxAspectRatio    //可显示的高度
@@ -57,6 +60,8 @@ class GameScene: SKScene {
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.zPosition = -1
         self.addChild(background)
+        
+        playBackgroundMusic("backgroundMusic.mp3")
         
         zombie.position = CGPoint(x: 400, y: 400)
         self.addChild(zombie)
@@ -93,6 +98,7 @@ class GameScene: SKScene {
         addChild(shape)
     }
     
+    // MARK: Update
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         if lastUpdateTime > 0 {
@@ -107,10 +113,11 @@ class GameScene: SKScene {
             zombie.position = lastTouchLocation
             velocity = CGPointZero
             stopZombieAnimation()
-            return
+        } else {
+            moveSprite(zombie, velocity: velocity)
+            rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
         }
-        moveSprite(zombie, velocity: velocity)
-        rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
+        boundsCheckZombie()
         moveTrain()
     }
     
@@ -219,7 +226,17 @@ class GameScene: SKScene {
             self.invincible = false
         }
         zombie.runAction(SKAction.sequence([blinkAction, setHidden]))
-        
+        loseCats()
+        lives -= 1
+        if lives <= 0 && !gameOver {
+            gameOver = true
+            print("You lose!")
+            backgroundMusicPlayer.stop()
+            let gameOverScene = GameOverScene(size: size, won: false)
+            gameOverScene.scaleMode = scaleMode
+            let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+            view?.presentScene(gameOverScene, transition: reveal)
+        }
     }
     
     func checkCollosion () {
@@ -250,6 +267,7 @@ class GameScene: SKScene {
     }
     
     func moveTrain() {
+        var trainCount = 0
         var targetPosition = zombie.position
         enumerateChildNodesWithName("train") { (node, stop) in
             if !node.hasActions() {
@@ -262,7 +280,18 @@ class GameScene: SKScene {
                 node.runAction(moveAction)
 
             }
+            trainCount += 1
             targetPosition = node.position
+        }
+        if trainCount >= 15 && !gameOver {
+            gameOver = true
+            print("You win!")
+            backgroundMusicPlayer.stop()
+            let gameOverScene = GameOverScene(size: size, won: true)
+            gameOverScene.scaleMode = scaleMode
+            let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+            view?.presentScene(gameOverScene, transition: reveal)
+            
         }
     }
     // MARK: touch action
@@ -297,6 +326,30 @@ class GameScene: SKScene {
         let direction = offset / length
         
         velocity = direction * zombieMovePointsPerSec
+    }
+    
+    // MARK: Win & Lose
+    func loseCats() {
+        var loseCount = 0
+        enumerateChildNodesWithName("train") { (node, stop) in
+            var randomSpot = node.position
+            randomSpot.x += CGFloat.random(min: -100, max: 100)
+            randomSpot.y += CGFloat.random(min: -100, max: 100)
+            
+            node.name = ""
+            node.runAction(SKAction.sequence([
+                SKAction.group([
+                    SKAction.rotateByAngle(π*4, duration: 1.0),
+                    SKAction.moveTo(randomSpot, duration: 1.0),
+                    SKAction.scaleTo(0, duration: 1.0)
+                ]),
+                SKAction.removeFromParent()
+                ]))
+            loseCount += 1
+            if loseCount >= 2 {
+                stop.memory = true
+            }
+        }
     }
     
 }
