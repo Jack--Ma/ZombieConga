@@ -20,6 +20,7 @@
 		C49341871D1903ED00132F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49341851D1903ED00132F31 /* LaunchScreen.storyboard */; };
 		C4BF99D21D29F855006146E4 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF99D11D29F855006146E4 /* GameOverScene.swift */; };
 		C4BF99D41D2A4378006146E4 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */; };
+		C4BF9A321D2F8FF1006146E4 /* GLIMSTIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C4BF9A311D2F8FF1006146E4 /* GLIMSTIC.TTF */; };
 		C4DB26DB1D1B8BE000C32D0C /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		C4BF99D11D29F855006146E4 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AvailableFonts.xcodeproj; path = AvailableFonts/AvailableFonts.xcodeproj; sourceTree = "<group>"; };
+		C4BF9A311D2F8FF1006146E4 /* GLIMSTIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GLIMSTIC.TTF; sourceTree = "<group>"; };
 		C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 		C45A43311D250EFD0046EF50 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4BF9A311D2F8FF1006146E4 /* GLIMSTIC.TTF */,
 				C45A43321D250F2E0046EF50 /* sounds */,
 			);
 			name = resources;
@@ -202,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BF9A321D2F8FF1006146E4 /* GLIMSTIC.TTF in Resources */,
 				C49341871D1903ED00132F31 /* LaunchScreen.storyboard in Resources */,
 				C45A433C1D250F3C0046EF50 /* win.wav in Resources */,
 				C45A43391D250F3C0046EF50 /* hitCat.wav in Resources */,

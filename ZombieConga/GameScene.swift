@@ -39,6 +39,9 @@ class GameScene: SKScene {
                       height: playableRect.height)
     }
     
+    let livesLabel = SKLabelNode(fontNamed: "Glimstick")
+    let catsLabel = SKLabelNode(fontNamed: "Glimstick")
+    
     // MARK: init
     override init(size: CGSize) {
         let maxAspectRatio: CGFloat = 16.0/9.0  //16:9屏幕下
@@ -86,6 +89,26 @@ class GameScene: SKScene {
         addChild(cameraNode)
         camera = cameraNode
         setCameraPosition(CGPoint(x: size.width/2, y: size.height/2))
+        
+        livesLabel.text = "Lives: X"
+        livesLabel.fontColor = SKColor.blackColor()
+        livesLabel.fontSize = 100
+        livesLabel.zPosition = 100
+        livesLabel.position = CGPoint(x: -playableRect.size.width/2 + CGFloat(20),
+                                      y: -playableRect.size.height/2  + CGFloat(20) + overlapAmount()/2)
+        livesLabel.horizontalAlignmentMode = .Left
+        livesLabel.verticalAlignmentMode = .Bottom
+        cameraNode.addChild(livesLabel)
+        
+        catsLabel.text = "Cats: X"
+        catsLabel.fontColor = SKColor.blackColor()
+        catsLabel.fontSize = 100
+        catsLabel.zPosition = 100
+        catsLabel.position = CGPoint(x: playableRect.size.width/2 - CGFloat(20),
+                                     y: -playableRect.size.height/2 + CGFloat(20) + overlapAmount()/2)
+        catsLabel.horizontalAlignmentMode = .Right
+        catsLabel.verticalAlignmentMode = .Bottom
+        cameraNode.addChild(catsLabel)
     }
    
     //scroll background
@@ -148,13 +171,11 @@ class GameScene: SKScene {
     }
     
     func getCameraPosition() -> CGPoint {
-        return CGPoint(x: cameraNode.position.x, y: cameraNode.position.y +
-            overlapAmount()/2)
+        return CGPoint(x: cameraNode.position.x, y: cameraNode.position.y + overlapAmount()/2)
     }
     
     func setCameraPosition(position: CGPoint) {
-        cameraNode.position = CGPoint(x: position.x, y: position.y -
-            overlapAmount()/2)
+        cameraNode.position = CGPoint(x: position.x, y: position.y - overlapAmount()/2)
     }
     
     // MARK: Update
@@ -361,6 +382,8 @@ class GameScene: SKScene {
             trainCount += 1
             targetPosition = node.position
         }
+        livesLabel.text = "Lives: \(lives)"
+        catsLabel.text = "Cats: \(trainCount)"
         if trainCount >= 15 && !gameOver {
             gameOver = true
             print("You win!")
@@ -369,9 +392,9 @@ class GameScene: SKScene {
             gameOverScene.scaleMode = scaleMode
             let reveal = SKTransition.flipHorizontalWithDuration(0.5)
             view?.presentScene(gameOverScene, transition: reveal)
-            
         }
     }
+    
     // MARK: touch action
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         guard let touch = touches.first else {
