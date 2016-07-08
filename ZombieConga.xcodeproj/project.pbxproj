@@ -23,6 +23,16 @@
 		C4DB26DB1D1B8BE000C32D0C /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C4BF9A2F1D2F72ED006146E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4BF9A121D2F72EC006146E4;
+			remoteInfo = AvailableFonts;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C45A43331D250F3C0046EF50 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundMusic.mp3; path = resources/Sounds/backgroundMusic.mp3; sourceTree = "<group>"; };
 		C45A43341D250F3C0046EF50 /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCat.wav; path = resources/Sounds/hitCat.wav; sourceTree = "<group>"; };
@@ -39,6 +49,7 @@
 		C49341881D1903ED00132F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4BF99D11D29F855006146E4 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AvailableFonts.xcodeproj; path = AvailableFonts/AvailableFonts.xcodeproj; sourceTree = "<group>"; };
 		C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +87,7 @@
 		C493416C1D1903ED00132F31 = {
 			isa = PBXGroup;
 			children = (
+				C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */,
 				C49341771D1903ED00132F31 /* ZombieConga */,
 				C49341761D1903ED00132F31 /* Products */,
 			);
@@ -105,6 +117,14 @@
 				C49341881D1903ED00132F31 /* Info.plist */,
 			);
 			path = ZombieConga;
+			sourceTree = "<group>";
+		};
+		C4BF9A2C1D2F72EC006146E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF9A301D2F72ED006146E4 /* AvailableFonts.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,12 +174,28 @@
 			mainGroup = C493416C1D1903ED00132F31;
 			productRefGroup = C49341761D1903ED00132F31 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C4BF9A2C1D2F72EC006146E4 /* Products */;
+					ProjectRef = C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C49341741D1903ED00132F31 /* ZombieConga */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C4BF9A301D2F72ED006146E4 /* AvailableFonts.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AvailableFonts.app;
+			remoteRef = C4BF9A2F1D2F72ED006146E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C49341731D1903ED00132F31 /* Resources */ = {
