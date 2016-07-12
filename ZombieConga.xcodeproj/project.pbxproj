@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41C6AFE1D338ED500164A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C6AFD1D338ED500164A3F /* AppDelegate.swift */; };
+		C41C6B041D338ED500164A3F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C6B031D338ED500164A3F /* GameViewController.swift */; };
+		C41C6B091D338ED500164A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41C6B071D338ED500164A3F /* Main.storyboard */; };
+		C41C6B0B1D338ED500164A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41C6B0A1D338ED500164A3F /* Assets.xcassets */; };
+		C41C6B111D338F8B00164A3F /* GLIMSTIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C4BF9A311D2F8FF1006146E4 /* GLIMSTIC.TTF */; };
+		C41C6B121D338F8B00164A3F /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C45A43331D250F3C0046EF50 /* backgroundMusic.mp3 */; };
+		C41C6B131D338F8B00164A3F /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = C45A43341D250F3C0046EF50 /* hitCat.wav */; };
+		C41C6B141D338F8B00164A3F /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = C45A43351D250F3C0046EF50 /* hitCatLady.wav */; };
+		C41C6B151D338F8B00164A3F /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = C45A43361D250F3C0046EF50 /* lose.wav */; };
+		C41C6B161D338F8B00164A3F /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = C45A43371D250F3C0046EF50 /* win.wav */; };
+		C41C6B171D338F8B00164A3F /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */; };
+		C41C6B181D338F8B00164A3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493417C1D1903ED00132F31 /* GameScene.swift */; };
+		C41C6B191D338F8B00164A3F /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF99D11D29F855006146E4 /* GameOverScene.swift */; };
+		C41C6B1A1D338F8B00164A3F /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */; };
+		C41C6B1B1D338F8B00164A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49341831D1903ED00132F31 /* Assets.xcassets */; };
 		C45A43381D250F3C0046EF50 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C45A43331D250F3C0046EF50 /* backgroundMusic.mp3 */; };
 		C45A43391D250F3C0046EF50 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = C45A43341D250F3C0046EF50 /* hitCat.wav */; };
 		C45A433A1D250F3C0046EF50 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = C45A43351D250F3C0046EF50 /* hitCatLady.wav */; };
@@ -25,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C41C6AD21D332BFE00164A3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C41C6ACD1D332BFD00164A3F /* tvOSTouchTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C41C6AB51D332BFD00164A3F;
+			remoteInfo = tvOSTouchTest;
+		};
 		C4BF9A2F1D2F72ED006146E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */;
@@ -35,6 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C41C6ACD1D332BFD00164A3F /* tvOSTouchTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tvOSTouchTest.xcodeproj; path = tvOSTouchTest/tvOSTouchTest.xcodeproj; sourceTree = "<group>"; };
+		C41C6AFB1D338ED500164A3F /* ZombieCongaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieCongaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41C6AFD1D338ED500164A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C41C6B031D338ED500164A3F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C41C6B081D338ED500164A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C41C6B0A1D338ED500164A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C41C6B0C1D338ED500164A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C45A43331D250F3C0046EF50 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundMusic.mp3; path = resources/Sounds/backgroundMusic.mp3; sourceTree = "<group>"; };
 		C45A43341D250F3C0046EF50 /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCat.wav; path = resources/Sounds/hitCat.wav; sourceTree = "<group>"; };
 		C45A43351D250F3C0046EF50 /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCatLady.wav; path = resources/Sounds/hitCatLady.wav; sourceTree = "<group>"; };
@@ -42,20 +71,27 @@
 		C45A43371D250F3C0046EF50 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = resources/Sounds/win.wav; sourceTree = "<group>"; };
 		C49341751D1903ED00132F31 /* ZombieConga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieConga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49341781D1903ED00132F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C493417C1D1903ED00132F31 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C493417C1D1903ED00132F31 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = ZombieConga/GameScene.swift; sourceTree = "<group>"; };
 		C493417E1D1903ED00132F31 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C49341811D1903ED00132F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C49341831D1903ED00132F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C49341831D1903ED00132F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ZombieConga/Assets.xcassets; sourceTree = "<group>"; };
 		C49341861D1903ED00132F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C49341881D1903ED00132F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4BF99D11D29F855006146E4 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
-		C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		C4BF99D11D29F855006146E4 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameOverScene.swift; path = ZombieConga/GameOverScene.swift; sourceTree = "<group>"; };
+		C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuScene.swift; path = ZombieConga/MainMenuScene.swift; sourceTree = "<group>"; };
 		C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AvailableFonts.xcodeproj; path = AvailableFonts/AvailableFonts.xcodeproj; sourceTree = "<group>"; };
 		C4BF9A311D2F8FF1006146E4 /* GLIMSTIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GLIMSTIC.TTF; sourceTree = "<group>"; };
-		C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
+		C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyUtils.swift; path = ZombieConga/MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C41C6AF81D338ED500164A3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C49341721D1903ED00132F31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,6 +102,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41C6ACE1D332BFD00164A3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C41C6AD31D332BFE00164A3F /* tvOSTouchTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C41C6AFC1D338ED500164A3F /* ZombieCongaTV */ = {
+			isa = PBXGroup;
+			children = (
+				C41C6AFD1D338ED500164A3F /* AppDelegate.swift */,
+				C41C6B031D338ED500164A3F /* GameViewController.swift */,
+				C41C6B071D338ED500164A3F /* Main.storyboard */,
+				C41C6B0A1D338ED500164A3F /* Assets.xcassets */,
+				C41C6B0C1D338ED500164A3F /* Info.plist */,
+			);
+			path = ZombieCongaTV;
+			sourceTree = "<group>";
+		};
+		C41C6B101D338F2E00164A3F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C45A43311D250EFD0046EF50 /* resources */,
+				C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */,
+				C493417C1D1903ED00132F31 /* GameScene.swift */,
+				C4BF99D11D29F855006146E4 /* GameOverScene.swift */,
+				C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */,
+				C49341831D1903ED00132F31 /* Assets.xcassets */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		C45A43311D250EFD0046EF50 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +142,7 @@
 				C45A43321D250F2E0046EF50 /* sounds */,
 			);
 			name = resources;
+			path = ZombieConga;
 			sourceTree = "<group>";
 		};
 		C45A43321D250F2E0046EF50 /* sounds */ = {
@@ -90,8 +160,11 @@
 		C493416C1D1903ED00132F31 = {
 			isa = PBXGroup;
 			children = (
+				C41C6B101D338F2E00164A3F /* Shared */,
+				C41C6ACD1D332BFD00164A3F /* tvOSTouchTest.xcodeproj */,
 				C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */,
 				C49341771D1903ED00132F31 /* ZombieConga */,
+				C41C6AFC1D338ED500164A3F /* ZombieCongaTV */,
 				C49341761D1903ED00132F31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				C49341751D1903ED00132F31 /* ZombieConga.app */,
+				C41C6AFB1D338ED500164A3F /* ZombieCongaTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,15 +181,9 @@
 		C49341771D1903ED00132F31 /* ZombieConga */ = {
 			isa = PBXGroup;
 			children = (
-				C45A43311D250EFD0046EF50 /* resources */,
 				C49341781D1903ED00132F31 /* AppDelegate.swift */,
 				C493417E1D1903ED00132F31 /* GameViewController.swift */,
-				C4BF99D31D2A4378006146E4 /* MainMenuScene.swift */,
-				C493417C1D1903ED00132F31 /* GameScene.swift */,
-				C4BF99D11D29F855006146E4 /* GameOverScene.swift */,
-				C4DB26DA1D1B8BE000C32D0C /* MyUtils.swift */,
 				C49341801D1903ED00132F31 /* Main.storyboard */,
-				C49341831D1903ED00132F31 /* Assets.xcassets */,
 				C49341851D1903ED00132F31 /* LaunchScreen.storyboard */,
 				C49341881D1903ED00132F31 /* Info.plist */,
 			);
@@ -133,6 +201,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C41C6AFA1D338ED500164A3F /* ZombieCongaTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C41C6B0D1D338ED500164A3F /* Build configuration list for PBXNativeTarget "ZombieCongaTV" */;
+			buildPhases = (
+				C41C6AF71D338ED500164A3F /* Sources */,
+				C41C6AF81D338ED500164A3F /* Frameworks */,
+				C41C6AF91D338ED500164A3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZombieCongaTV;
+			productName = ZombieCongaTV;
+			productReference = C41C6AFB1D338ED500164A3F /* ZombieCongaTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C49341741D1903ED00132F31 /* ZombieConga */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C493418B1D1903ED00132F31 /* Build configuration list for PBXNativeTarget "ZombieConga" */;
@@ -160,6 +245,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = JackMa;
 				TargetAttributes = {
+					C41C6AFA1D338ED500164A3F = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2658KK4JZ7;
+					};
 					C49341741D1903ED00132F31 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 2658KK4JZ7;
@@ -182,15 +271,27 @@
 					ProductGroup = C4BF9A2C1D2F72EC006146E4 /* Products */;
 					ProjectRef = C4BF9A2B1D2F72EC006146E4 /* AvailableFonts.xcodeproj */;
 				},
+				{
+					ProductGroup = C41C6ACE1D332BFD00164A3F /* Products */;
+					ProjectRef = C41C6ACD1D332BFD00164A3F /* tvOSTouchTest.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				C49341741D1903ED00132F31 /* ZombieConga */,
+				C41C6AFA1D338ED500164A3F /* ZombieCongaTV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C41C6AD31D332BFE00164A3F /* tvOSTouchTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = tvOSTouchTest.app;
+			remoteRef = C41C6AD21D332BFE00164A3F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C4BF9A301D2F72ED006146E4 /* AvailableFonts.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -201,6 +302,22 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C41C6AF91D338ED500164A3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41C6B131D338F8B00164A3F /* hitCat.wav in Resources */,
+				C41C6B141D338F8B00164A3F /* hitCatLady.wav in Resources */,
+				C41C6B1B1D338F8B00164A3F /* Assets.xcassets in Resources */,
+				C41C6B091D338ED500164A3F /* Main.storyboard in Resources */,
+				C41C6B161D338F8B00164A3F /* win.wav in Resources */,
+				C41C6B121D338F8B00164A3F /* backgroundMusic.mp3 in Resources */,
+				C41C6B111D338F8B00164A3F /* GLIMSTIC.TTF in Resources */,
+				C41C6B151D338F8B00164A3F /* lose.wav in Resources */,
+				C41C6B0B1D338ED500164A3F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C49341731D1903ED00132F31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +337,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C41C6AF71D338ED500164A3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41C6B181D338F8B00164A3F /* GameScene.swift in Sources */,
+				C41C6B041D338ED500164A3F /* GameViewController.swift in Sources */,
+				C41C6B171D338F8B00164A3F /* MainMenuScene.swift in Sources */,
+				C41C6B191D338F8B00164A3F /* GameOverScene.swift in Sources */,
+				C41C6B1A1D338F8B00164A3F /* MyUtils.swift in Sources */,
+				C41C6AFE1D338ED500164A3F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C49341711D1903ED00132F31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +366,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C41C6B071D338ED500164A3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C41C6B081D338ED500164A3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		C49341801D1903ED00132F31 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -255,6 +393,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C41C6B0E1D338ED500164A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ZombieCongaTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qq100858433.ZombieCongaTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		C41C6B0F1D338ED500164A3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ZombieCongaTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = qq100858433.ZombieCongaTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
 		C49341891D1903ED00132F31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -369,6 +537,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C41C6B0D1D338ED500164A3F /* Build configuration list for PBXNativeTarget "ZombieCongaTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41C6B0E1D338ED500164A3F /* Debug */,
+				C41C6B0F1D338ED500164A3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C49341701D1903ED00132F31 /* Build configuration list for PBXProject "ZombieConga" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

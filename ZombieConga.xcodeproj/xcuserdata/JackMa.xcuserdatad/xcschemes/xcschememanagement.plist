@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ZombieCongaTV.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C41C6AFA1D338ED500164A3F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C49341741D1903ED00132F31</key>
 		<dict>
 			<key>primary</key>
